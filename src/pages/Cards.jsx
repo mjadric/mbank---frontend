@@ -11,7 +11,7 @@ const CreditCard = () => {
     const fetchCardData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:3000/card', {
+        const response = await axios.get('https://mbank-backend.azurewebsites.net/card', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

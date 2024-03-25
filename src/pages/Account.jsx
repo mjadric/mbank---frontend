@@ -18,7 +18,7 @@ const AccountForm = () => {
     const fetchUserData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:3000/account', {
+        const response = await axios.get('https://mbank-backend.azurewebsites.net/account', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -61,7 +61,7 @@ const AccountForm = () => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.patch(
-        'http://localhost:3000/update-phone-number',
+        'https://mbank-backend.azurewebsites.net/update-phone-number',
         {
           phoneNumber,
         },
