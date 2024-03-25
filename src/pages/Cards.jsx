@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Cards from 'react-credit-cards';
-import 'react-credit-cards/es/styles-compiled.css';
 import Navbar from '../components/NavBar';
 
 const CreditCard = () => {
@@ -71,7 +69,7 @@ const CreditCard = () => {
             {creditCards.map(card => (
               <div key={card._id} className="mb-3 shadow p-3">
                 <div className="card p-3">
-                  <Cards
+                  <div
                     number={card.creditCardNumber}
                     name={`${userData.firstName} ${userData.lastName}`}
                     expiry={card.expiryDate || '01/23'} 
