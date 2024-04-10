@@ -14,7 +14,7 @@ const LandingPage = () => {
         <div className="container text-center">
           <div className="row align-items-center" style={{ paddingTop: '8rem' }}>
             <div className="col-md-6">
-              <img src="src/assets/_.gif" alt="" className="img-fluid w-100" />
+              <img src="../public/_.gif" alt="" className="img-fluid w-100" />
             </div>
             <div className="col-md-6">
               <div className="text-center">
