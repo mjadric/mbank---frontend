@@ -18,7 +18,7 @@ const MakeTransaction = () => {
     useEffect(() => {
         const fetchUserAccounts = async () => {
             try {
-                const response = await axios.get('https://backendmia.azurewebsites.net/account', {
+                const response = await axios.get('https://mbank---backend.azurewebsites.net/account', {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`
                     }
@@ -68,7 +68,7 @@ const MakeTransaction = () => {
                 return;
             }
 
-            const response = await axios.post('https://backendmia.azurewebsites.net/transaction', { ...formData, amount }, {
+            const response = await axios.post('https://mbank---backend.azurewebsites.net/transaction', { ...formData, amount }, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
