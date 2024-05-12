@@ -22,7 +22,7 @@ const LoginForm = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('https://mbank---backend.azurewebsites.net/login', formData);
+      const response = await axios.post('https://backend-bank.azurewebsites.net//login', formData);
       
       if (response.data.message === 'Successful login.') {
         localStorage.setItem('token', response.data.token);

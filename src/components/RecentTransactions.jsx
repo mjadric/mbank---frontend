@@ -8,7 +8,7 @@ const RecentTransactions = ({ updateTrigger }) => {
     useEffect(() => {
         const fetchTransactions = async () => {
             try {
-                const response = await axios.get('https://mbank---backend.azurewebsites.net/transactions/recent', {
+                const response = await axios.get('https://backend-bank.azurewebsites.net//transactions/recent', {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`
                     }

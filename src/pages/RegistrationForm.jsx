@@ -30,7 +30,7 @@ const RegistrationForm = () => {
         return;
       }
 
-      const response = await axios.post('https://mbank---backend.azurewebsites.net/register', formData);
+      const response = await axios.post('https://backend-bank.azurewebsites.net//register', formData);
       
       if (response.data.message === 'Registration successful.') {
         navigate('/login'); 
