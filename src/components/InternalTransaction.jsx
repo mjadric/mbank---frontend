@@ -16,7 +16,7 @@ const InternalTransaction = ({ updateData }) => {
   useEffect(() => {
     const fetchUserAccounts = async () => {
       try {
-        const response = await axios.get('https://backend-bank.azurewebsites.net/account', {
+        const response = await axios.get('http://bank.westeurope.cloudapp.azure.com/account', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`
           }
@@ -52,7 +52,7 @@ const InternalTransaction = ({ updateData }) => {
     }
   
     try {
-      const response = await axios.post('https://backend-bank.azurewebsites.net/transactions/internal-transfer', transferData, {
+      const response = await axios.post('http://bank.westeurope.cloudapp.azure.com/transactions/internal-transfer', transferData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`
         }
