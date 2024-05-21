@@ -7,7 +7,7 @@ const RecentTransactions = () => {
     useEffect(() => {
         const fetchTransactions = async () => {
             try {
-                const response = await axios.get('https://bank.westeurope.cloudapp.azure.com/transactions', {
+                const response = await axios.get('https://backend-bank.azurewebsites.net//transactions', {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`
                     }
