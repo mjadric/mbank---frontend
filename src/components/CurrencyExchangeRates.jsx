@@ -24,7 +24,7 @@ const CurrencyExchangeRates = () => {
         setExchangeRates(exchangeRatesArray);
         setIsLoading(false);
       } catch (error) {
-        console.error('Error fetching exchange rates:', error);
+        error('Error fetching exchange rates:', error);
         setIsLoading(false);
       }
     };

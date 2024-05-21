@@ -15,7 +15,7 @@ const RecentTransactions = ({ updateTrigger }) => {
                 });
                 setTransactions(response.data.data);
             } catch (error) {
-                console.error('Error fetching recent transactions:', error);
+                error('Error fetching recent transactions:', error);
             } finally {
                 setLoading(false);
             }

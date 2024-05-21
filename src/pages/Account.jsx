@@ -28,10 +28,10 @@ const AccountForm = () => {
           setUserData(response.data.data.user);
           setPhoneNumber(response.data.data.user.phoneNumber || ''); 
         } else {
-          console.error('Error fetching user data:', response.data.error);
+          error('Error fetching user data:', response.data.error);
         }
       } catch (error) {
-        console.error('Error fetching user data:', error);
+        error('Error fetching user data:', error);
       } finally {
         setIsLoading(false);
       }
@@ -75,10 +75,10 @@ const AccountForm = () => {
       if (response.data.success) {
         setShowMessage(true); 
       } else {
-        console.error('Error saving account data:', response.data.error);
+        error('Error saving account data:', response.data.error);
       }
     } catch (error) {
-      console.error('Error saving account data:', error);
+      error('Error saving account data:', error);
     }
   };
 

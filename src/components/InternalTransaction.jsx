@@ -24,7 +24,7 @@ const InternalTransaction = ({ updateData }) => {
         setUserAccounts(response.data.data.accounts);
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching user accounts:', error);
+        error('Error fetching user accounts:', error);
         setError('Error fetching user accounts');
         setLoading(false);
       }

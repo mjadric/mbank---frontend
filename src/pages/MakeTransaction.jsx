@@ -31,7 +31,7 @@ const MakeTransaction = () => {
                     });
                 }
             } catch (error) {
-                console.error('Error fetching user accounts:', error);
+                error('Error fetching user accounts:', error);
             }
         };
 

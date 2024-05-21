@@ -14,7 +14,7 @@ const RecentTransactions = () => {
                 });
                 setTransactions(response.data.data);
             } catch (error) {
-                console.error('Error fetching recent transactions:', error);
+                error('Error fetching recent transactions:', error);
             }
         };
 
