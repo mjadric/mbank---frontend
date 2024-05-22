@@ -13,7 +13,7 @@ const AllTransactions = () => {
     useEffect(() => {
         const fetchTransactions = async () => {
             try {
-                const response = await axios.get('https://backend-bank.azurewebsites.net/transactions/all', {
+                const response = await axios.get('https://bank.westeurope.cloudapp.azure.com/transactions/all', {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`
                     },
@@ -26,7 +26,6 @@ const AllTransactions = () => {
                 setTransactions(response.data.data.reverse()); 
                 setLoading(false);
             } catch (error) {
-                console.error('Error fetching transactions:', error);
                 setError('Error fetching transactions');
                 setLoading(false);
             }
