@@ -30,7 +30,7 @@ const RegistrationForm = () => {
         return;
       }
 
-      const response = await axios.post('https://bank.westeurope.cloudapp.azure.com/register', formData);
+      const response = await axios.post('https://ebank-server.azurewebsites.net/register', formData);
       
       if (response.data.message === 'Registration successful.') {
         navigate('/login'); 

@@ -9,7 +9,7 @@ const AvailableBalance = ({ updateTrigger }) => {
   useEffect(() => {
     const fetchBalances = async () => {
       try {
-        const response = await axios.get('https://bank.westeurope.cloudapp.azure.com/balance', {
+        const response = await axios.get('https://ebank-server.azurewebsites.net/balance', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`
           }

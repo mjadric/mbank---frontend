@@ -18,7 +18,7 @@ const MakeTransaction = () => {
     useEffect(() => {
         const fetchUserAccounts = async () => {
             try {
-                const response = await axios.get('https://bank.westeurope.cloudapp.azure.com/account', {
+                const response = await axios.get('https://ebank-server.azurewebsites.net/account', {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`
                     }
@@ -68,7 +68,7 @@ const MakeTransaction = () => {
                 return;
             }
 
-            const response = await axios.post('https://bank.westeurope.cloudapp.azure.com/transaction', { ...formData, amount }, {
+            const response = await axios.post('https://ebank-server.azurewebsites.net/transaction', { ...formData, amount }, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 }

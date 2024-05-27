@@ -18,7 +18,7 @@ const AccountForm = () => {
     const fetchUserData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('https://bank.westeurope.cloudapp.azure.com/account', {
+        const response = await axios.get('https://ebank-server.azurewebsites.net/account', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -61,7 +61,7 @@ const AccountForm = () => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.patch(
-        'https://bank.westeurope.cloudapp.azure.com/update-phone-number',
+        'https://ebank-server.azurewebsites.net/update-phone-number',
         {
           phoneNumber,
         },

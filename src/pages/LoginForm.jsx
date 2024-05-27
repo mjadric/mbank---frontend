@@ -22,7 +22,7 @@ const LoginForm = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('https://bank.westeurope.cloudapp.azure.com/login', formData);
+      const response = await axios.post('https://ebank-server.azurewebsites.net/login', formData);
       
       if (response.data.message === 'Successful login.') {
         localStorage.setItem('token', response.data.token);
